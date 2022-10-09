@@ -7,6 +7,8 @@ public abstract class ComplexExpression {
     public ComplexNumber[] getArgs(){return args;}
     public Operation getOperation() {return operation;}
 
+    // create ComplexExpression instance featuring an operation
+    // and arguments
     public ComplexExpression(Operation op, ComplexNumber[] args)
     {
         this.operation=op;
@@ -14,8 +16,11 @@ public abstract class ComplexExpression {
     }
 
 
+    // abstract method for custom operations
     protected abstract ComplexNumber executeOneOperation(ComplexNumber a, ComplexNumber b);
-    public ComplexNumber execute()
+
+    // core expression solver, performs n1 op n2 op ... op nk
+    public final ComplexNumber execute()
     {
         ComplexNumber result=null;
         for(ComplexNumber z: this.getArgs())

@@ -5,6 +5,7 @@ import Lab1_Complex.Expressions.Division;
 import Lab1_Complex.Expressions.Multiplication;
 import Lab1_Complex.Expressions.Subtraction;
 
+// Singleton instance for creating expressions
 public class ExpressionFactory {
     private static ExpressionFactory instance = new ExpressionFactory();
 
@@ -12,6 +13,7 @@ public class ExpressionFactory {
 
     public static ExpressionFactory getInstance() { return instance; }
 
+    // Returns expression based on a given operation and complex arguments
     public ComplexExpression createExpression(Operation op, ComplexNumber[] args)
     {
         switch(op)
