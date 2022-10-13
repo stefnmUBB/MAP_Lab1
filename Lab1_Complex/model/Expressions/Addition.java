@@ -12,6 +12,6 @@ public class Addition extends ComplexExpression {
 
     @Override
     protected ComplexNumber executeOneOperation(ComplexNumber a, ComplexNumber b) {
-        return new ComplexNumber(a.re+b.re, a.im+b.im);
+        return a.add(b);
     }
 }

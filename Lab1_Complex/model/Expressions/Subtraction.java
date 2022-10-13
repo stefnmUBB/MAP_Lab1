@@ -11,6 +11,6 @@ public class Subtraction extends ComplexExpression {
     }
     @Override
     protected ComplexNumber executeOneOperation(ComplexNumber a, ComplexNumber b) {
-        return new ComplexNumber(a.re-b.re, a.im-b.im);
+        return a.sub(b);
     }
 }

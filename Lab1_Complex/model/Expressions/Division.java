@@ -11,10 +11,6 @@ public class Division extends ComplexExpression {
     }
     @Override
     protected ComplexNumber executeOneOperation(ComplexNumber a, ComplexNumber b) {
-        // (a*b^)/|b|^2
-        float l = b.re*b.re+b.im*b.im;
-        float re = (a.re*b.re+a.im*b.im)/l;
-        float im = (a.im*b.re-a.re*b.im)/l;
-        return new ComplexNumber(re,im);
+        return a.div(b);
     }
 }

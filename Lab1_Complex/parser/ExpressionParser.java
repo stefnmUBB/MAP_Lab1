@@ -1,9 +1,9 @@
 package Lab1_Complex.parser;
 
-import Lab1_Complex.InvalidOperatorSymbolException;
-import Lab1_Complex.InvalidTokenCountException;
-import Lab1_Complex.InvalidTokenException;
-import Lab1_Complex.OperatorException;
+import Lab1_Complex.exceptions.InvalidOperatorSymbolException;
+import Lab1_Complex.exceptions.InvalidTokenCountException;
+import Lab1_Complex.exceptions.InvalidTokenException;
+import Lab1_Complex.exceptions.OperatorException;
 import Lab1_Complex.factory.ExpressionFactory;
 import Lab1_Complex.model.ComplexExpression;
 import Lab1_Complex.model.Expressions.Addition;

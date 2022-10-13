@@ -1,5 +1,9 @@
 package Lab1_Complex;
 
+import Lab1_Complex.exceptions.InvalidOperatorSymbolException;
+import Lab1_Complex.exceptions.InvalidTokenCountException;
+import Lab1_Complex.exceptions.InvalidTokenException;
+import Lab1_Complex.exceptions.OperatorException;
 import Lab1_Complex.model.ComplexExpression;
 import Lab1_Complex.model.ComplexNumber;
 import Lab1_Complex.parser.ExpressionParser;
@@ -25,13 +29,13 @@ public class Main {
             throw new RuntimeException();
             //System.out.println("General exception");
         }
-        catch (Lab1_Complex.InvalidTokenException e) {
+        catch (InvalidTokenException e) {
             System.out.println("Could not parse token");
-        } catch (Lab1_Complex.InvalidTokenCountException e) {
+        } catch (InvalidTokenCountException e) {
             System.out.println("Invalid tokens count");
-        } catch (Lab1_Complex.OperatorException e) {
+        } catch (OperatorException e) {
             System.out.println("Multiple operators detected");
-        } catch (Lab1_Complex.InvalidOperatorSymbolException e) {
+        } catch (InvalidOperatorSymbolException e) {
             System.out.println("Invalid operator symbol");
         }
     }
